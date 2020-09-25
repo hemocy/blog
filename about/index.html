@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
     <title>
-        Archive: 2020/9 | mocy&#39;s blog
+        About | mocy&#39;s blog
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -50,7 +50,7 @@
                 </li>
             
                 <li class="menu-item">
-                    <a class="active"
+                    <a class=""
                        href="/blog/archives"
                     >
                         文章
@@ -58,7 +58,7 @@
                 </li>
             
                 <li class="menu-item">
-                    <a class=""
+                    <a class="active"
                        href="/blog/about"
                     >
                         关于我
@@ -81,12 +81,12 @@
                 </li>
             
                 <li class="drawer-menu-item">
-                    <a class="active"
+                    <a class=""
                        href="/blog/archives">文章</a>
                 </li>
             
                 <li class="drawer-menu-item">
-                    <a class=""
+                    <a class="active"
                        href="/blog/about">关于我</a>
                 </li>
             
@@ -106,38 +106,59 @@
 
                     
                         <div class="fade-in-down-animation">
-    <div class="archive-container ">
-        
-<div class="archive-list-container">
+    <div class="about-container">
+        <div class="about-content markdown-body">
+            <h2 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p>身高：175cm<br>体重：70kg<br>爱好：女<br>性别：男<br>外号：脉龙湖吴彦祖</p>
+<h3 id="兴趣"><a href="#兴趣" class="headerlink" title="兴趣"></a>兴趣</h3><p>篮球，羽毛球，旅游，游戏</p>
+
+        </div>
+        <div class="about-comments">
+            
+                <div class="comments-container">
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2020</span>
-                <span class="archive-year-post-count">[2]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/blog/2020/09/25/test/"
-                        >test</a>
-                        <span class="article-date">09-25</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/blog/2020/09/25/hello-world/"
-                        >Hello World</a>
-                        <span class="article-date">09-25</span>
-                    </li>
-                
-            </ul>
-        </section>
+        
+    <div class="valine-container">
+        <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+        <div id="vcomments"></div>
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: '9pYUpuvSlvLA4brCRtgfz2if-gzGzoHsz',
+                appKey: 'CuWmzFjG48scLCVGwx6V1O0M',
+                meta: 'nick,mail,link'.split(','),
+                avatar: 'wavatar',
+                enableQQ: true,
+                placeholder: '',
+                lang: 'cn'.toLowerCase()
+            });
+
+
+            // Valine 评论列表增加"作者"标识
+            const getValineDomTimer = setInterval(() => {
+                const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                if (vcards.length > 0) {
+                    for (let vcard of vcards) {
+                        const vnick = vcard.querySelector('.vhead .vnick');
+                        if (vnick.innerHTML.toLocaleLowerCase() === 'mocy'.toLocaleLowerCase()) {
+                            vcard.classList.add('author');
+                        }
+                    }
+                    clearInterval(getValineDomTimer);
+                } else {
+                    clearInterval(getValineDomTimer);
+                }
+            }, 2000);
+        </script>
+    </div>
+
+
     
 </div>
-
+            
+        </div>
     </div>
 </div>
+
 
                     
 
